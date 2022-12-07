@@ -1,3 +1,4 @@
+import 'package:dilsosmedia/routes/route.dart';
 import 'package:dilsosmedia/screens/splash_secreen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,10 +14,12 @@ class DilSosMedia extends StatefulWidget {
 class _DilSosMediaState extends State<DilSosMedia> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SplashScreen(),
+    return MaterialApp(
+      home: const SplashScreen(),
       // initialRoute: ,
-      // routes: {},
+      routes: {
+        RouteDilSosMedia.splash: (context) => const SplashScreen(),
+      },
     );
   }
 }
